@@ -1,7 +1,5 @@
-import { CategoryCard } from './components/CategoryCard'
+import { HomePage } from '@/pages/HomePage'
 
-export const App = () => {
-  return <CategoryCard iconSrc="/icons/astrology.svg" title="Astrology" coursesCount={42} />
-}
+const App = () => <HomePage />
 
 export default App

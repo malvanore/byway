@@ -1,0 +1,33 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  height: 120px;
+  width: 420px;
+  gap: 24px;
+  padding: 24px;
+  border-radius: 24px;
+  background: #f9f9fb;
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.icon {
+  width: 72px;
+  aspect-ratio: 1/1;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+.title {
+  margin: 0;
+  font-size: 24px;
+  color: #1c2024eb;
+}
+
+.count {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+}
