@@ -1,0 +1,40 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 280px;
+  width: 420px;
+  border-radius: 24px;
+  background: #f9f9fb;
+  overflow: hidden;
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.cover {
+  display: flex;
+  height: 130px;
+  min-width: 400px;
+  object-fit: cover;
+}
+
+.information {
+  display: flex;
+  padding: 24px;
+  gap: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: 24px;
+  color: #4958c6f5;
+}
+
+.author {
+  font-size: 20px;
+  color: #1c2024b8;
+}
+
+.price {
+  font-size: 20px;
+  color: #4958c6f5;
+}
