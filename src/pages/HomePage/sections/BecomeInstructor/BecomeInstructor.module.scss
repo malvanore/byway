@@ -1,0 +1,14 @@
+.section {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  background-color: #f9f9fb;
+  margin: 40px 0;
+  padding: 40px 0;
+}
+
+.image {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}

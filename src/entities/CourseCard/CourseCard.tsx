@@ -12,7 +12,7 @@ export const CourseCard = ({ cover, title, author, price }: CourseCardProps) => 
     <article className={styles.card}>
       <img className={styles.cover} src={cover} alt="" />
       <div className={styles.information}>
-        <p className={styles.title}>{title}</p>
+        <h3 className={styles.title}>{title}</h3>
         <p className={styles.author}>{author}</p>
         <p className={styles.price}>${price}</p>
       </div>

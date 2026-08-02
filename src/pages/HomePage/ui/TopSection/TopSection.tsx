@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 
-import { Button } from '@/ui/Button/Button'
+import { Button } from '@/ui/Button/Button.tsx'
 
 import styles from './TopSection.module.scss'
 
@@ -14,7 +14,7 @@ export const TopSection = ({ title, children }: TopSectionProps) => {
     <section className={styles.topSection}>
       <div className={styles.top}>
         <div className={styles.topHeader}>
-          <h1 className={styles.topTitle}>{title}</h1>
+          <h2 className={styles.topTitle}>{title}</h2>
           <Button>See all</Button>
         </div>
         <div className={styles.topGrid}>{children}</div>

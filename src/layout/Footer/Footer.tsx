@@ -41,10 +41,9 @@ export const Footer = () => {
         <h2 className={styles.title}>Get Help</h2>
 
         <ul className={styles.list}>
-          {HELP_LINKS.map(({ label, href }) => (
-            /* когда будут рабочие ссыли надо заменить ключ на href */
+          {HELP_LINKS.map(({ label }) => (
             <li key={label}>
-              <a className={styles.link} href={href}>
+              <a className={styles.link} href="#">
                 {label}
               </a>
             </li>
@@ -56,9 +55,9 @@ export const Footer = () => {
         <h2 className={styles.title}>Programs</h2>
 
         <ul className={styles.list}>
-          {PROGRAM_LINKS.map(({ label, href }) => (
+          {PROGRAM_LINKS.map(({ label }) => (
             <li key={label}>
-              <a className={styles.link} href={href}>
+              <a className={styles.link} href="#">
                 {label}
               </a>
             </li>
@@ -68,13 +67,11 @@ export const Footer = () => {
 
       <div className={styles.column}>
         <h2 className={styles.title}>Contact Us</h2>
-        <ul className={styles.list}>
-          <div className={styles.contacts}>
-            {CONTACTS.map((contact) => (
-              <p key={contact}>{contact}</p>
-            ))}
-          </div>
-        </ul>
+        <div className={styles.contacts}>
+          {CONTACTS.map((contact) => (
+            <p key={contact}>{contact}</p>
+          ))}
+        </div>
       </div>
     </footer>
   )
