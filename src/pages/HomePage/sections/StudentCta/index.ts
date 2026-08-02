@@ -1,0 +1,1 @@
+export { StudentCta } from './StudentCta'

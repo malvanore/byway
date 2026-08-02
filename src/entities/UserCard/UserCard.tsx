@@ -11,7 +11,7 @@ export const UserCard = ({ avatar, name, occupation }: UserCardProps) => {
     <article className={styles.card}>
       <img className={styles.avatar} src={avatar} alt="" />
       <div className={styles.information}>
-        <p className={styles.name}>{name}</p>
+        <h3 className={styles.name}>{name}</h3>
         <p className={styles.occupation}>{occupation}</p>
       </div>
     </article>
