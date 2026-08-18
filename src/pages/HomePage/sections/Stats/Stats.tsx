@@ -1,5 +1,7 @@
 import styles from './Stats.module.scss'
 
+import { StatsCard } from '@/entities/StatsCard'
+
 const ACHIEVEMENTS = [
   { value: '250+', label: 'Courses by our best mentors' },
   { value: '100+', label: 'Experienced mentors' },
@@ -10,10 +12,7 @@ export const Stats = () => {
   return (
     <section className={styles.section}>
       {ACHIEVEMENTS.map(({ value, label }) => (
-        <div key={value} className={styles.card}>
-          <span className={styles.cardTitle}>{value}</span>
-          <span className={styles.cardDescription}>{label}</span>
-        </div>
+        <StatsCard title={value} description={label} />
       ))}
     </section>
   )

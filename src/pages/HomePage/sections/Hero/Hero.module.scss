@@ -4,9 +4,9 @@
   min-height: 70vh;
   background-color: #f9f9fb;
   justify-content: space-between;
-  gap: 4rem;
-  margin: 40px 0px;
-  padding: 40px 0;
+  gap: 3rem;
+  margin: 40px 0;
+  padding: 20px 0;
 }
 
 .composition {
@@ -14,7 +14,8 @@
   position: relative;
   width: 100%;
   flex-shrink: 0;
-  margin-right: 80px;
+  margin-right: 20vw;
+  margin-top: 10vh;
 }
 
 .circle {
@@ -63,7 +64,7 @@
 
 .invite {
   position: absolute;
-  bottom: 15vh;
-  left: 21vw;
+  bottom: 10vh;
+  left: 20vw;
   width: 180px;
 }

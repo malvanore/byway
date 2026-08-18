@@ -26,7 +26,7 @@ export const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.brand}>
-        <a className={styles.logo} href="#">
+        <a className={styles.logo} href="/">
           <Logo />
           <span className={styles.logoText}>Byway</span>
         </a>
@@ -41,13 +41,16 @@ export const Footer = () => {
         <h2 className={styles.title}>Get Help</h2>
 
         <ul className={styles.list}>
-          {HELP_LINKS.map(({ label }) => (
-            <li key={label}>
-              <a className={styles.link} href="#">
-                {label}
-              </a>
-            </li>
-          ))}
+          <ul className={styles.list}>
+            {HELP_LINKS.map(({ label, href }) => (
+              <li key={label}>
+                <a className={styles.link} href={href}>
+                  {' '}
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
         </ul>
       </nav>
 
@@ -55,9 +58,9 @@ export const Footer = () => {
         <h2 className={styles.title}>Programs</h2>
 
         <ul className={styles.list}>
-          {PROGRAM_LINKS.map(({ label }) => (
+          {PROGRAM_LINKS.map(({ label, href }) => (
             <li key={label}>
-              <a className={styles.link} href="#">
+              <a className={styles.link} href={href}>
                 {label}
               </a>
             </li>
