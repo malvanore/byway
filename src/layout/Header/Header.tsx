@@ -7,7 +7,7 @@ import styles from './Header.module.scss'
 export const Header = () => {
   return (
     <header className={styles.header}>
-      <a className={styles.logoLink} href="#" aria-label="Byway home">
+      <a className={styles.logoLink} href="/" aria-label="Byway home">
         <Logo />
       </a>
       <div className={styles.wrapper}>

@@ -1,17 +1,15 @@
-import { type ReactNode } from 'react'
-
 import styles from './CategoryCard.module.scss'
 
 interface CategoryCardProps {
-  icon: ReactNode
+  iconSrc: string
   title: string
   coursesCount: number
 }
 
-export const CategoryCard = ({ icon, title, coursesCount }: CategoryCardProps) => {
+export const CategoryCard = ({ iconSrc, title, coursesCount }: CategoryCardProps) => {
   return (
     <article className={styles.card}>
-      {icon}
+      <img src={iconSrc} alt="" className={styles.icon} />
       <div className={styles.info}>
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.count}>{coursesCount} courses</p>
