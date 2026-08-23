@@ -1,3 +1,5 @@
+import cn from 'classnames'
+
 import Logo from '@/assets/icons/logo.svg?react'
 import SearchIcon from '@/assets/icons/search.svg?react'
 import CartIcon from '@/assets/icons/cart.svg?react'
@@ -22,11 +24,11 @@ export const Header = () => {
             <CartIcon />
           </a>
 
-          <a className={`${styles.authLink} ${styles.login}`} href="/login">
+          <a className={cn(styles.authLink, styles.login)} href="/login">
             Log in
           </a>
 
-          <a className={`${styles.authLink} ${styles.signup}`} href="/signup">
+          <a className={cn(styles.authLink, styles.signup)} href="/signup">
             Sign up
           </a>
         </nav>
