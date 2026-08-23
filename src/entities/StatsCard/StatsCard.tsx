@@ -9,7 +9,7 @@ export const StatsCard = ({ title, description }: StatsCardProps) => {
   return (
     <article className={styles.card}>
       <div className={styles.card}>
-        <span className={styles.title}>{title}</span>
+        <h3 className={styles.title}>{title}</h3>
         <span className={styles.description}>{description}</span>
       </div>
     </article>
