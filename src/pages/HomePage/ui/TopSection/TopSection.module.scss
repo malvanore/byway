@@ -1,0 +1,31 @@
+.topSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-block: 20px;
+  margin-top: 40px;
+}
+
+.topHeader {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topTitle {
+  font-family:
+    Fira Sans Condensed,
+    sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.topGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 20px;
+}
