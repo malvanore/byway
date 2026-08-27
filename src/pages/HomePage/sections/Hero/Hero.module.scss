@@ -1,0 +1,10 @@
+.section {
+  display: flex;
+  flex-direction: row;
+  min-height: 70vh;
+  background-color: #f9f9fb;
+  justify-content: space-between;
+  gap: 3rem;
+  margin: 40px 0;
+  padding: 20px 0;
+}

@@ -1,0 +1,144 @@
+/* box-sizing для всех элементов */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внешние и внутренние отступы */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Убираем маркеры списков */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Плавный скролл по якорям */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Высота на весь экран для flex/grid-раскладок */
+html,
+body {
+  height: 100%;
+}
+
+/* Базовые настройки текста */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Медиа-элементы: без зазора снизу, не вылезают за контейнер */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Формы наследуют шрифт и цвет родителя */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Кнопки: сброс браузерных стилей */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Поля форм: убираем рамку и фон, НО фокус оставляем видимым */
+input,
+textarea,
+select {
+  border: none;
+  background: none;
+}
+
+/* Видимый фокус только при навигации с клавиатуры (доступность) */
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Сброс fieldset */
+fieldset {
+  border: none;
+}
+
+/* Таблицы */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Заголовки наследуют размер и жирность (стилизуем вручную) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Горизонтальная линия */
+hr {
+  border: none;
+  height: 0;
+}
+
+/* Адрес без курсива */
+address {
+  font-style: normal;
+}
+
+/* Ссылки: без подчёркивания, цвет родителя */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Уважаем настройку "меньше движения" в ОС пользователя */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Убираем стрелки у числовых инпутов */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
