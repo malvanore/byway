@@ -1,13 +1,13 @@
-import { Hero } from './sections/Hero'
-import { Stats } from './sections/Stats'
-import { Categories } from './sections/Categories'
-import { Courses } from './sections/Courses'
-import { Instructors } from './sections/Instructors'
-import { BecomeInstructor } from './sections/BecomeInstructor'
-import { StudentCta } from './sections/StudentCta'
+import { Hero } from './ui/Hero'
+import { Stats } from './ui/Stats'
+import { Categories } from './ui/Categories'
+import { Courses } from './ui/Courses'
+import { Instructors } from './ui/Instructors'
+import { BecomeInstructor } from './ui/BecomeInstructor'
+import { StudentCta } from './ui/StudentCta'
 
-import { Header } from '@/layout/Header'
-import { Footer } from '@/layout/Footer'
+import { Header } from '@/widgets/Header'
+import { Footer } from '@/widgets/Footer'
 
 import styles from './HomePage.module.scss'
 
