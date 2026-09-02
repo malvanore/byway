@@ -1,12 +1,12 @@
 import cn from 'classnames'
 
+import styles from './Banner.module.scss'
+
+import starIcon from '@/shared/assets/icons/star.svg'
 import inviteImage from '@/shared/assets/img/invite.png'
 import person1 from '@/shared/assets/img/person1.png'
 import person2 from '@/shared/assets/img/person2.png'
 import person3 from '@/shared/assets/img/person3.png'
-import starIcon from '@/shared/assets/icons/star.svg'
-
-import styles from './Banner.module.scss'
 
 export const Banner = () => {
   return (

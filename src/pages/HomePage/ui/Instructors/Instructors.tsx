@@ -1,21 +1,21 @@
-import avatar from '@/shared/assets/img/avatar.jpg'
-
+import { UserCard } from '@/entities/User'
+import { Button } from '@/shared/ui/Button'
 import { TopSection } from '@/shared/ui/TopSection'
 
-import { UserCard } from '@/entities/UserCard'
+import avatarImage from '@/shared/assets/img/avatar.jpg'
 
 const INSTRUCTORS = [
-  { id: 0, avatar, name: 'Ronald Richards', occupation: 'UI/UX Designer' },
-  { id: 1, avatar, name: 'Ronald Richards', occupation: 'UI/UX Designer' },
-  { id: 2, avatar, name: 'Ronald Richards', occupation: 'UI/UX Designer' },
-  { id: 3, avatar, name: 'Ronald Richards', occupation: 'UI/UX Designer' },
+  { id: 0, avatar: avatarImage, name: 'Ronald Richards', occupation: 'UI/UX Designer' },
+  { id: 1, avatar: avatarImage, name: 'Ronald Richards', occupation: 'UI/UX Designer' },
+  { id: 2, avatar: avatarImage, name: 'Ronald Richards', occupation: 'UI/UX Designer' },
+  { id: 3, avatar: avatarImage, name: 'Ronald Richards', occupation: 'UI/UX Designer' },
 ]
 
 export const Instructors = () => {
   return (
-    <TopSection title="Top Instructors">
-      {INSTRUCTORS.map(({ id, avatar, name, occupation }) => (
-        <UserCard key={id} avatar={avatar} name={name} occupation={occupation} />
+    <TopSection title="Top Instructors" action={<Button>See all</Button>}>
+      {INSTRUCTORS.map(({ id, ...instructor }) => (
+        <UserCard key={id} {...instructor} />
       ))}
     </TopSection>
   )

@@ -1,15 +1,12 @@
-.page {
-  display: flex;
-  flex-direction: column;
-  font-family: 'Fira Sans Condensed', sans-serif;
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-between;
+  margin: 0 80px;
+  gap: 20px;
 }
 
-.main {
-  background: #f0f0f3;
-  padding: 40px 0;
-}
-
-.topList {
+.topSectionLists {
   display: flex;
   flex-direction: column;
   width: 100%;
