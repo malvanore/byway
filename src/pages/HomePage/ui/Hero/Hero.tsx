@@ -1,4 +1,6 @@
+import { Button } from '@/shared/ui/Button'
 import { PromoContent } from '@/shared/ui/PromoContent'
+
 import { Banner } from './Banner'
 
 import styles from './Hero.module.scss'
@@ -13,9 +15,9 @@ export const Hero = () => {
           'We believe that education is the key to personal and professional growth, ' +
           "and we're here to guide you on your journey to success."
         }
-        buttonText="Start your instructor journey"
+        action={<Button>Start your instructor journey</Button>}
+        titleTag={'h1'}
       />
-
       <Banner />
     </section>
   )

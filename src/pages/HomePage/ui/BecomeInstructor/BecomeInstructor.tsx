@@ -1,8 +1,9 @@
-import personInstructor from '@/shared/assets/img/personInstructor.svg'
-
+import { Button } from '@/shared/ui/Button'
 import { PromoContent } from '@/shared/ui/PromoContent'
 
 import styles from './BecomeInstructor.module.scss'
+
+import personInstructor from '@/shared/assets/img/personInstructor.svg'
 
 export const BecomeInstructor = () => {
   return (
@@ -17,7 +18,7 @@ export const BecomeInstructor = () => {
           'Instructors from around the world teach millions of students on Byway. ' +
           'We provide the tools and skills to teach what you love.'
         }
-        buttonText="Start your instructor journey"
+        action={<Button>Start your instructor journey</Button>}
       />
     </section>
   )

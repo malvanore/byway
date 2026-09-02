@@ -1,8 +1,9 @@
-import personEducation from '@/shared/assets/img/personEducation.svg'
-
+import { Button } from '@/shared/ui/Button'
 import { PromoContent } from '@/shared/ui/PromoContent'
 
 import styles from './StudentCta.module.scss'
+
+import personEducation from '@/shared/assets/img/personEducation.svg'
 
 export const StudentCta = () => {
   return (
@@ -13,7 +14,7 @@ export const StudentCta = () => {
           'Learners around the world are launching new careers, advancing in ' +
           'their fields, and enriching their lives.'
         }
-        buttonText="Checkout courses"
+        action={<Button>Checkout courses</Button>}
       />
 
       <div className={styles.image}>

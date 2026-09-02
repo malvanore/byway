@@ -1,8 +1,8 @@
-import astrologyIcon from '@/shared/assets/icons/astrology.svg'
-
+import { CategoryCard } from '@/entities/Category'
+import { Button } from '@/shared/ui/Button'
 import { TopSection } from '@/shared/ui/TopSection'
 
-import { CategoryCard } from '@/entities/Category'
+import astrologyIcon from '@/shared/assets/icons/astrology.svg'
 
 const CATEGORIES = [
   { id: 0, iconSrc: astrologyIcon, title: 'Astrology', coursesCount: 11 },
@@ -13,9 +13,9 @@ const CATEGORIES = [
 
 export const Categories = () => {
   return (
-    <TopSection title="Top Categories">
-      {CATEGORIES.map(({ id, iconSrc, title, coursesCount }) => (
-        <CategoryCard key={id} iconSrc={iconSrc} title={title} coursesCount={coursesCount} />
+    <TopSection title="Top Categories" action={<Button>See all</Button>}>
+      {CATEGORIES.map(({ id, ...category }) => (
+        <CategoryCard key={id} {...category} />
       ))}
     </TopSection>
   )

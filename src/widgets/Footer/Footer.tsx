@@ -1,6 +1,6 @@
-import Logo from '@/shared/assets/icons/logo.svg?react'
-
 import styles from './Footer.module.scss'
+
+import Logo from '@/shared/assets/icons/logo.svg?react'
 
 const HELP_LINKS = [
   { label: 'Contact Us', href: '#' },

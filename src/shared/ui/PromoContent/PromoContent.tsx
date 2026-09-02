@@ -1,19 +1,20 @@
-import { Button } from '@/shared/ui/Button'
+import type { ReactNode } from 'react'
 
 import styles from './PromoContent.module.scss'
 
 interface PromoContentProps {
   title: string
   description: string
-  buttonText: string
+  action?: ReactNode
+  titleTag?: 'h1' | 'h2'
 }
 
-export const PromoContent = ({ title, description, buttonText }: PromoContentProps) => {
+export const PromoContent = ({ title, description, action, titleTag: Title = 'h2' }: PromoContentProps) => {
   return (
     <div className={styles.content}>
-      <h2 className={styles.title}>{title}</h2>
+      <Title className={styles.title}>{title}</Title>
       <p className={styles.description}>{description}</p>
-      <Button>{buttonText}</Button>
+      {action}
     </div>
   )
 }

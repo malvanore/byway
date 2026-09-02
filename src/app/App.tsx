@@ -1,3 +1,11 @@
 import { HomePage } from '@/pages/HomePage'
 
-export const App = () => <HomePage />
+import { BaseLayout } from './layouts/BaseLayout'
+
+export const App = () => {
+  return (
+    <BaseLayout>
+      <HomePage />
+    </BaseLayout>
+  )
+}

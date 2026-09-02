@@ -1,10 +1,10 @@
 import cn from 'classnames'
 
+import styles from './Header.module.scss'
+
+import CartIcon from '@/shared/assets/icons/cart.svg?react'
 import Logo from '@/shared/assets/icons/logo.svg?react'
 import SearchIcon from '@/shared/assets/icons/search.svg?react'
-import CartIcon from '@/shared/assets/icons/cart.svg?react'
-
-import styles from './Header.module.scss'
 
 export const Header = () => {
   return (

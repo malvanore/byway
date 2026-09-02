@@ -1,8 +1,8 @@
-import courseCover from '@/shared/assets/img/cover.jpg'
-
+import { CourseCard } from '@/entities/Course'
+import { Button } from '@/shared/ui/Button'
 import { TopSection } from '@/shared/ui/TopSection'
 
-import { CourseCard } from '@/entities/Course'
+import courseCover from '@/shared/assets/img/cover.jpg'
 
 const COURSES = [
   { id: 0, cover: courseCover, title: "Beginner's Guide to Design", author: 'By Ronald Richards', price: 149.9 },
@@ -13,9 +13,9 @@ const COURSES = [
 
 export const Courses = () => {
   return (
-    <TopSection title="Top Courses">
-      {COURSES.map(({ id, cover, title, author, price }) => (
-        <CourseCard key={id} cover={cover} title={title} author={author} price={price} />
+    <TopSection title="Top Courses" action={<Button>See all</Button>}>
+      {COURSES.map(({ id, ...course }) => (
+        <CourseCard key={id} {...course} />
       ))}
     </TopSection>
   )

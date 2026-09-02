@@ -1,6 +1,6 @@
-import styles from './Stats.module.scss'
-
 import { StatsCard } from '@/shared/ui/StatsCard'
+
+import styles from './Stats.module.scss'
 
 const ACHIEVEMENTS = [
   { id: 0, value: '250+', label: 'Courses by our best mentors' },
