@@ -13,7 +13,7 @@ const CATEGORIES = [
 
 export const Categories = () => {
   return (
-    <TopSection title="Top Categories" action={<Button>See all</Button>}>
+    <TopSection title="Top Categories" action={<Button text="See all" onClick={() => {}} />}>
       {CATEGORIES.map(({ id, ...category }) => (
         <CategoryCard key={id} {...category} />
       ))}

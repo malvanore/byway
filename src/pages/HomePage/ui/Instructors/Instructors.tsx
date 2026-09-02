@@ -13,7 +13,7 @@ const INSTRUCTORS = [
 
 export const Instructors = () => {
   return (
-    <TopSection title="Top Instructors" action={<Button>See all</Button>}>
+    <TopSection title="Top Instructors" action={<Button text="See all" onClick={() => {}} />}>
       {INSTRUCTORS.map(({ id, ...instructor }) => (
         <UserCard key={id} {...instructor} />
       ))}
