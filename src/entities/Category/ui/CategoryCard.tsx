@@ -1,3 +1,5 @@
+import type { FC } from 'react'
+
 import styles from './CategoryCard.module.scss'
 
 interface CategoryCardProps {
@@ -6,7 +8,7 @@ interface CategoryCardProps {
   coursesCount: number
 }
 
-export const CategoryCard = ({ iconSrc, title, coursesCount }: CategoryCardProps) => {
+export const CategoryCard: FC<CategoryCardProps> = ({ iconSrc, title, coursesCount }) => {
   return (
     <article className={styles.card}>
       <img src={iconSrc} alt="" className={styles.icon} />

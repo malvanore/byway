@@ -1,3 +1,5 @@
+import type { FC } from 'react'
+
 import styles from './CourseCard.module.scss'
 
 interface CourseCardProps {
@@ -7,7 +9,7 @@ interface CourseCardProps {
   price: number
 }
 
-export const CourseCard = ({ cover, title, author, price }: CourseCardProps) => {
+export const CourseCard: FC<CourseCardProps> = ({ cover, title, author, price }) => {
   return (
     <article className={styles.card}>
       <img className={styles.cover} src={cover} alt="" />
