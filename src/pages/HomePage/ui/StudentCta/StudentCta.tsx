@@ -14,7 +14,7 @@ export const StudentCta = () => {
           'Learners around the world are launching new careers, advancing in ' +
           'their fields, and enriching their lives.'
         }
-        action={<Button>Checkout courses</Button>}
+        action={<Button text={'Checkout courses'} onClick={() => {}}></Button>}
       />
 
       <div className={styles.image}>

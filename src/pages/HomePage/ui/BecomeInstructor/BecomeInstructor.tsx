@@ -18,7 +18,7 @@ export const BecomeInstructor = () => {
           'Instructors from around the world teach millions of students on Byway. ' +
           'We provide the tools and skills to teach what you love.'
         }
-        action={<Button>Start your instructor journey</Button>}
+        action={<Button text={'Start your instructor journey'} onClick={() => {}}></Button>}
       />
     </section>
   )

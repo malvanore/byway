@@ -15,7 +15,7 @@ export const Hero = () => {
           'We believe that education is the key to personal and professional growth, ' +
           "and we're here to guide you on your journey to success."
         }
-        action={<Button>Start your instructor journey</Button>}
+        action={<Button text="Start your instructor journey" onClick={() => {}} />}
         titleTag={'h1'}
       />
       <Banner />

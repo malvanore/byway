@@ -13,7 +13,7 @@ const COURSES = [
 
 export const Courses = () => {
   return (
-    <TopSection title="Top Courses" action={<Button>See all</Button>}>
+    <TopSection title="Top Courses" action={<Button text="See all" onClick={() => {}} />}>
       {COURSES.map(({ id, ...course }) => (
         <CourseCard key={id} {...course} />
       ))}
