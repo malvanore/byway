@@ -5,9 +5,12 @@ import { TopSection } from '@/shared/ui/TopSection'
 
 export const Instructors = () => {
   return (
-    <TopSection title="Top Instructors" action={<Button text="See all" onClick={() => {}} />}>
-      {INSTRUCTORS.map(({ id, ...instructor }) => (
-        <UserCard key={id} {...instructor} />
+    <TopSection
+      title="Top Instructors"
+      action={<Button text="See all" onClick={() => console.log('переход на стр с менторами')} />}
+    >
+      {INSTRUCTORS.map((instructor) => (
+        <UserCard key={instructor.id} user={instructor} />
       ))}
     </TopSection>
   )
