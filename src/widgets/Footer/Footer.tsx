@@ -1,28 +1,21 @@
+import type { FC } from 'react'
+
 import styles from './Footer.module.scss'
 
 import Logo from '@/shared/assets/icons/logo.svg?react'
 
-const HELP_LINKS = [
-  { label: 'Contact Us', href: '#' },
-  { label: 'Latest Articles', href: '#' },
-  { label: 'FAQ', href: '#' },
-]
+interface FooterLink {
+  label: string
+  href: string
+}
 
-const PROGRAM_LINKS = [
-  { label: 'Art & Design', href: '#' },
-  { label: 'Business', href: '#' },
-  { label: 'IT & Software', href: '#' },
-  { label: 'Languages', href: '#' },
-  { label: 'Programming', href: '#' },
-]
+interface FooterProps {
+  helpLinks: FooterLink[]
+  programLinks: FooterLink[]
+  contacts: string[]
+}
 
-const CONTACTS = [
-  'Address: Saint-Petersburg, Kronverkskaya st., building 7',
-  'Tel: 8(800) 555-35-35',
-  'Mail: bywayedu@webkul.in',
-]
-
-export const Footer = () => {
+export const Footer: FC<FooterProps> = ({ helpLinks, programLinks, contacts }) => {
   return (
     <footer className={styles.footer}>
       <div className={styles.brand}>
@@ -41,7 +34,7 @@ export const Footer = () => {
         <h2 className={styles.title}>Get Help</h2>
 
         <ul className={styles.list}>
-          {HELP_LINKS.map(({ label, href }) => (
+          {helpLinks.map(({ label, href }) => (
             <li key={label}>
               <a className={styles.link} href={href}>
                 {label}
@@ -55,7 +48,7 @@ export const Footer = () => {
         <h2 className={styles.title}>Programs</h2>
 
         <ul className={styles.list}>
-          {PROGRAM_LINKS.map(({ label, href }) => (
+          {programLinks.map(({ label, href }) => (
             <li key={label}>
               <a className={styles.link} href={href}>
                 {label}
@@ -68,7 +61,7 @@ export const Footer = () => {
       <div className={styles.column}>
         <h2 className={styles.title}>Contact Us</h2>
         <div className={styles.contacts}>
-          {CONTACTS.map((contact) => (
+          {contacts.map((contact) => (
             <p key={contact}>{contact}</p>
           ))}
         </div>

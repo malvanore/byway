@@ -18,7 +18,12 @@ export const BecomeInstructor = () => {
           'Instructors from around the world teach millions of students on Byway. ' +
           'We provide the tools and skills to teach what you love.'
         }
-        action={<Button text={'Start your instructor journey'} onClick={() => {}}></Button>}
+        action={
+          <Button
+            text={'Start your instructor journey'}
+            onClick={() => console.log('Переход на стр для реги инструктором')}
+          ></Button>
+        }
       />
     </section>
   )
