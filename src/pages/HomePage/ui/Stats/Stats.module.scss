@@ -1,6 +1,8 @@
+@use '@/shared/styles/tokens' as *;
+
 .section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
-  margin: 0 80px;
+  gap: $space-l;
+  margin-inline: $space-2xl;
 }
