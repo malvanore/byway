@@ -1,33 +1,33 @@
+@use '@/shared/styles/tokens' as *;
+
 .card {
   display: flex;
-  flex-direction: row;
-  height: 120px;
-  width: 420px;
-  gap: 24px;
-  padding: 24px;
+  width: 100%;
+  max-width: 420px;
+  min-height: 120px;
+  gap: $space-md;
+  padding: $space-md;
   border-radius: 24px;
-  background: #f9f9fb;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  background: $light-surface;
+  font-family: $font-condensed;
 }
 
 .icon {
-  width: 72px;
+  width: clamp(4rem, 3rem + 1.5vw, 5rem);
   aspect-ratio: 1/1;
 }
 
 .info {
   display: flex;
   flex-direction: column;
-  color: black;
 }
+
 .title {
-  margin: 0;
-  font-size: 24px;
-  color: #1c2024eb;
+  font-size: $font-size-h3;
+  color: $light-neutral-primary;
 }
 
 .count {
-  margin: 0;
-  font-size: 14px;
-  color: #6b7280;
+  font-size: $font-size-sm;
+  color: $light-neutral-tertiary;
 }

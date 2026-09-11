@@ -1,40 +1,44 @@
+@use '@/shared/styles/tokens' as *;
+
 .card {
   display: flex;
   flex-direction: column;
-  height: 280px;
-  width: 420px;
+  width: 100%;
+  max-width: 620px;
+  min-height: 280px;
   border-radius: 24px;
-  background: #f9f9fb;
+  background: $light-surface;
   overflow: hidden;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: $font-condensed;
 }
 
 .cover {
-  display: flex;
-  height: 130px;
-  min-width: 400px;
+  width: 100%;
+  max-width: 620px;
+  min-height: 130px;
   object-fit: cover;
+  display: block;
 }
 
 .information {
   display: flex;
-  padding: 24px;
-  gap: 8px;
+  padding: $space-md;
+  gap: $space-xs;
   flex-direction: column;
   align-items: flex-start;
 }
 
 .title {
-  font-size: 24px;
-  color: #4958c6f5;
+  font-size: $font-size-h3;
+  color: $light-vista-primary;
 }
 
 .author {
-  font-size: 20px;
-  color: #1c2024b8;
+  font-size: $font-size-p;
+  color: $light-neutral-secondary;
 }
 
 .price {
-  font-size: 20px;
-  color: #4958c6f5;
+  font-size: $font-size-p;
+  color: $light-vista-primary;
 }
