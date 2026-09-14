@@ -10,7 +10,7 @@ export const Courses = () => {
       action={<Button text="See all" onClick={() => console.log('переход на стр с курсами')} />}
     >
       {COURSES.map((course) => (
-        <CourseCard key={course.id} course={course} />
+        <CourseCard key={course.id} {...course} />
       ))}
     </TopSection>
   )

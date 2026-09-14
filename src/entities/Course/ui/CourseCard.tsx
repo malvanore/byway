@@ -4,12 +4,7 @@ import type { Course } from '../types'
 
 import styles from './CourseCard.module.scss'
 
-interface CourseCardProps {
-  course: Course
-}
-
-export const CourseCard: FC<CourseCardProps> = ({ course }) => {
-  const { cover, title, author, price } = course
+export const CourseCard: FC<Course> = ({ cover, title, author, price }) => {
   return (
     <article className={styles.card}>
       <img className={styles.cover} src={cover} alt="" />
