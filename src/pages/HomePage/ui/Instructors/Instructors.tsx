@@ -10,7 +10,7 @@ export const Instructors = () => {
       action={<Button text="See all" onClick={() => console.log('переход на стр с менторами')} />}
     >
       {INSTRUCTORS.map((instructor) => (
-        <UserCard key={instructor.id} user={instructor} />
+        <UserCard key={instructor.id} {...instructor} />
       ))}
     </TopSection>
   )
