@@ -1,0 +1,1 @@
+export { PromoContent } from './PromoContent'

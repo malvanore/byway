@@ -1,0 +1,33 @@
+{
+  "output": {
+    "filePath": "project.md",
+    "style": "markdown",
+    "removeComments": false,
+    "removeEmptyLines": false,
+    "showLineNumbers": false,
+    "fileSummary": true,
+    "directoryStructure": true
+  },
+  "include": ["src/**"],
+  "ignore": {
+    "useGitignore": true,
+    "useDefaultPatterns": true,
+    "customPatterns": [
+      "**/*.scss",
+      "**/*.css",
+      "**/*.svg",
+      "**/*.png",
+      "**/*.jpg",
+      "**/*.jpeg",
+      "**/*.woff",
+      "**/*.woff2",
+      "package-lock.json",
+      "project.md",
+      ".idea/**",
+      "public/**"
+    ]
+  },
+  "security": {
+    "enableSecurityCheck": true
+  }
+}
