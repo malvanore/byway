@@ -29,3 +29,6 @@ dist-ssr
 
 .eslintcache
 *.tsbuildinfo
+
+repomix-output.*
+project.md
