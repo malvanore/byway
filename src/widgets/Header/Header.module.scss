@@ -38,7 +38,7 @@
 .search {
   display: flex;
   flex: 1;
-  color: #edeef0d1;
+  color: $dark-neutral-secondary;
   font-size: $font-size-md;
 }
 
@@ -83,6 +83,7 @@
   padding-block: $space-xs;
   border-radius: 24px;
   color: $dark-neutral-primary;
+  border: 1px solid;
   background-color: $dark-overlay;
 }
 
