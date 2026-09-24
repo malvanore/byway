@@ -24,3 +24,28 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {}
+
+export const BrokenCover: Story = {
+  args: {
+    cover: '/img/definitely-not-here.jpg',
+  },
+}
+
+export const LargePrice: Story = {
+  args: {
+    price: 1234567,
+  },
+}
+
+export const NarrowContainer: Story = {
+  args: {
+    title: 'Beginner’s Complete Guide to Product Design and User Research',
+  },
+  decorators: [
+    (Story) => (
+      <div style={{ width: 280 }}>
+        <Story />
+      </div>
+    ),
+  ],
+}
