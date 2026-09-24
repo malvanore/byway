@@ -3,31 +3,42 @@
 .card {
   display: flex;
   width: 100%;
-  max-width: 420px;
-  min-height: 120px;
+  min-width: 10rem;
+  min-height: 7.5rem;
   gap: $space-md;
   padding: $space-md;
-  border-radius: 24px;
+  border-radius: $radius-def;
   background: $light-surface;
   font-family: $font-condensed;
 }
 
 .icon {
-  width: clamp(4rem, 3rem + 1.5vw, 5rem);
+  width: 72px;
   aspect-ratio: 1/1;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: $radius-def;
 }
 
 .info {
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .title {
   font-size: $font-size-h3;
   color: $light-neutral-primary;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  overflow-wrap: break-word;
 }
 
 .count {
   font-size: $font-size-sm;
   color: $light-neutral-tertiary;
+  white-space: nowrap;
 }

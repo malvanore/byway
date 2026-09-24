@@ -9,8 +9,8 @@ export const Instructors = () => {
       title="Top Instructors"
       action={<Button text="See all" onClick={() => alert('переход на стр с менторами')} />}
     >
-      {INSTRUCTORS.map((instructor) => (
-        <UserCard key={instructor.id} {...instructor} />
+      {INSTRUCTORS.map(({ id, ...cardProps }) => (
+        <UserCard key={id} {...cardProps} />
       ))}
     </TopSection>
   )

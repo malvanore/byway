@@ -2,7 +2,7 @@
 
 .button {
   display: inline-flex;
-  border-radius: 24px;
+  border-radius: $radius-def;
   white-space: nowrap;
   padding-inline: $space-md;
   padding-block: $space-xs;

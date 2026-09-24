@@ -9,8 +9,8 @@ export const Courses = () => {
       title="Top Courses"
       action={<Button text="See all" onClick={() => alert('переход на стр с курсами')} />}
     >
-      {COURSES.map((course) => (
-        <CourseCard key={course.id} {...course} />
+      {COURSES.map(({ id, ...cardProps }) => (
+        <CourseCard key={id} {...cardProps} />
       ))}
     </TopSection>
   )

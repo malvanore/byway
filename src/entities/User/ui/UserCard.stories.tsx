@@ -23,3 +23,34 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {}
+
+export const LongTitle: Story = {
+  args: {
+    name: 'Richardsffffffffffffffffffff',
+  },
+}
+
+export const LongOccupation: Story = {
+  args: {
+    occupation: 'Designerrrrrrrrrrrrrrrrrrrrr',
+  },
+}
+
+export const BrokenIcon: Story = {
+  args: {
+    avatar: '/icons/definitely-not-here.svg',
+  },
+}
+
+export const NarrowContainer: Story = {
+  args: {
+    name: 'Subaodpoaisbjpaosijv Hoo',
+  },
+  decorators: [
+    (Story) => (
+      <div style={{ width: 240 }}>
+        <Story />
+      </div>
+    ),
+  ],
+}

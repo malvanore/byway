@@ -3,12 +3,12 @@
 .section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 70vh;
+  min-height: 70dvh;
   background-color: $light-surface;
   justify-content: space-between;
   gap: $space-xl;
   margin-block: $space-l;
-  padding-inline: 4.25rem;
+  padding-inline: $space-3xl;
 }
 
 .wrapperLeft {
