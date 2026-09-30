@@ -1,33 +1,44 @@
+@use '@/shared/styles/tokens' as *;
+
 .card {
   display: flex;
-  flex-direction: row;
-  height: 120px;
-  width: 420px;
-  gap: 24px;
-  padding: 24px;
-  border-radius: 24px;
-  background: #f9f9fb;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  width: 100%;
+  min-width: 10rem;
+  min-height: 7.5rem;
+  gap: $space-md;
+  padding: $space-md;
+  border-radius: $radius-def;
+  background: $light-surface;
+  font-family: $font-condensed;
 }
 
 .icon {
   width: 72px;
   aspect-ratio: 1/1;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: $radius-def;
 }
 
 .info {
   display: flex;
   flex-direction: column;
-  color: black;
+  min-width: 0;
+  overflow: hidden;
 }
+
 .title {
-  margin: 0;
-  font-size: 24px;
-  color: #1c2024eb;
+  font-size: $font-size-h3;
+  color: $light-neutral-primary;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  overflow-wrap: break-word;
 }
 
 .count {
-  margin: 0;
-  font-size: 14px;
-  color: #6b7280;
+  font-size: $font-size-sm;
+  color: $light-neutral-tertiary;
+  white-space: nowrap;
 }

@@ -21,7 +21,7 @@ export const BecomeInstructor = () => {
         action={
           <Button
             text={'Start your instructor journey'}
-            onClick={() => console.log('Переход на стр для реги инструктором')}
+            onClick={() => alert('Переход на стр для реги инструктором')}
           ></Button>
         }
       />

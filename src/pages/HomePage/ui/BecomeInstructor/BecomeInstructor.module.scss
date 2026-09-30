@@ -1,10 +1,12 @@
+@use '@/shared/styles/tokens' as *;
+
 .section {
   display: flex;
-  flex-direction: row;
   flex: 1;
-  background-color: #f9f9fb;
-  margin: 40px 0;
-  padding: 40px 0;
+  background-color: $light-surface;
+  margin-block: $space-l;
+  padding-block: $space-l;
+  padding-right: $space-xl;
 }
 
 .image {

@@ -7,10 +7,10 @@ export const Categories = () => {
   return (
     <TopSection
       title="Top Categories"
-      action={<Button text="See all" onClick={() => console.log('переход на стр всех категорий')} />}
+      action={<Button text="See all" onClick={() => alert('переход на стр всех категорий')} />}
     >
-      {CATEGORIES.map((category) => (
-        <CategoryCard key={category.id} {...category} />
+      {CATEGORIES.map(({ id, ...cardProps }) => (
+        <CategoryCard key={id} {...cardProps} />
       ))}
     </TopSection>
   )

@@ -1,10 +1,10 @@
-import type { FC } from 'react'
-
 import type { Category } from '../types'
 
 import styles from './CategoryCard.module.scss'
 
-export const CategoryCard: FC<Category> = ({ iconSrc, title, coursesCount }) => {
+type CategoryCardProps = Pick<Category, 'iconSrc' | 'title' | 'coursesCount'>
+
+export const CategoryCard = ({ iconSrc, title, coursesCount }: CategoryCardProps) => {
   return (
     <article className={styles.card}>
       <img src={iconSrc} alt="" className={styles.icon} />

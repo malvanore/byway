@@ -1,4 +1,4 @@
-import type { FC, MouseEvent } from 'react'
+import type { MouseEvent } from 'react'
 
 import styles from './Button.module.scss'
 
@@ -7,7 +7,7 @@ interface ButtonProps {
   onClick: (event: MouseEvent<HTMLButtonElement>) => void
 }
 
-export const Button: FC<ButtonProps> = ({ text, onClick }) => {
+export const Button = ({ text, onClick }: ButtonProps) => {
   return (
     <button className={styles.button} type="button" onClick={onClick}>
       {text}
