@@ -7,10 +7,10 @@ export const Courses = () => {
   return (
     <TopSection
       title="Top Courses"
-      action={<Button text="See all" onClick={() => console.log('переход на стр с курсами')} />}
+      action={<Button text="See all" onClick={() => alert('переход на стр с курсами')} />}
     >
-      {COURSES.map((course) => (
-        <CourseCard key={course.id} {...course} />
+      {COURSES.map(({ id, ...cardProps }) => (
+        <CourseCard key={id} {...cardProps} />
       ))}
     </TopSection>
   )

@@ -1,10 +1,10 @@
-import type { FC } from 'react'
-
 import type { Course } from '../types'
 
 import styles from './CourseCard.module.scss'
 
-export const CourseCard: FC<Course> = ({ cover, title, author, price }) => {
+type CourseCardProps = Pick<Course, 'cover' | 'title' | 'author' | 'price'>
+
+export const CourseCard = ({ cover, title, author, price }: CourseCardProps) => {
   return (
     <article className={styles.card}>
       <img className={styles.cover} src={cover} alt="" />

@@ -1,5 +1,3 @@
-import type { FC } from 'react'
-
 import styles from './Footer.module.scss'
 
 import Logo from '@/shared/assets/icons/logo.svg?react'
@@ -15,7 +13,7 @@ interface FooterProps {
   contacts: string[]
 }
 
-export const Footer: FC<FooterProps> = ({ helpLinks, programLinks, contacts }) => {
+export const Footer = ({ helpLinks, programLinks, contacts }: FooterProps) => {
   return (
     <footer className={styles.footer}>
       <div className={styles.brand}>

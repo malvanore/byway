@@ -1,13 +1,15 @@
+@use '@/shared/styles/tokens' as *;
+
 .footer {
   display: flex;
   width: 100%;
-  height: 314px;
-  padding: 80px;
+  min-height: 320px;
+  padding: $space-5xl;
   justify-content: space-between;
-  background-color: #18191b;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  background-color: $dark-surface;
+  font-family: $font-condensed;
   color: white;
-  gap: 24px;
+  gap: $space-md;
 }
 
 .brand {
@@ -16,7 +18,7 @@
   flex-direction: column;
   width: 200px;
   height: 120px;
-  gap: 16px;
+  gap: $space-sm;
 }
 
 .logo {
@@ -28,13 +30,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 40px;
+  font-size: $font-size-h1;
 }
 
 .description {
   width: 70%;
-  color: #edeef0d1;
-  font-size: 14px;
+  color: $dark-neutral-secondary;
+  font-size: $font-size-sm;
 }
 
 .column {
@@ -42,16 +44,16 @@
 }
 
 .title {
-  font-size: 24px;
-  color: #edeef0f5;
+  font-size: $font-size-h3;
+  color: $dark-neutral-primary;
 }
 
 .list {
-  color: #edeef0d1;
-  font-size: 14px;
+  color: $dark-neutral-secondary;
+  font-size: $font-size-sm;
 }
 
 .contacts {
-  color: #edeef0d1;
-  font-size: 14px;
+  color: $dark-neutral-secondary;
+  font-size: $font-size-sm;
 }
