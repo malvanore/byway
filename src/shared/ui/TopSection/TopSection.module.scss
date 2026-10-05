@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-block: $space-m;
-  margin-top: $space-l;
+  margin-block: $space-5;
+  margin-top: $space-10;
 }
 
 .topHeader {
@@ -17,7 +17,7 @@
 
 .topTitle {
   font-family: $font-condensed;
-  font-size: $space-l;
+  font-size: $space-10;
   font-weight: $font-weight-medium;
 }
 
@@ -26,6 +26,6 @@
   grid-template-columns: repeat(4, 1fr);
   width: 100%;
   justify-content: space-between;
-  margin-top: $space-m;
-  gap: $space-m;
+  margin-top: $space-5;
+  gap: $space-5;
 }

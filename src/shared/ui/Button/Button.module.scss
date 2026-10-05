@@ -4,11 +4,11 @@
   display: inline-flex;
   border-radius: $radius-def;
   white-space: nowrap;
-  padding-inline: $space-md;
-  padding-block: $space-xs;
+  padding-inline: $space-6;
+  padding-block: $space-2;
   color: $dark-neutral-primary;
   background-color: $dark-overlay;
   border: #18191b;
   font-family: $font-condensed;
-  font-size: $font-size-m;
+  font-size: $text-base;
 }
