@@ -8,6 +8,7 @@ export const INSTRUCTORS = [
   { id: 2, avatar: avatarImage, name: 'Ronald Richards', occupation: 'UI/UX Designer' },
   { id: 3, avatar: avatarImage, name: 'Ronald Richards', occupation: 'UI/UX Designer' },
 ]
+
 export const CATEGORIES = [
   { id: 0, iconSrc: astrologyIcon, title: 'Astrology', coursesCount: 11 },
   { id: 1, iconSrc: astrologyIcon, title: 'Development', coursesCount: 12 },
@@ -16,8 +17,8 @@ export const CATEGORIES = [
 ]
 
 export const COURSES = [
-  { id: 0, cover: courseCover, title: "Beginner's Guide to Design", author: 'By Ronald Richards', price: 149.9 },
-  { id: 1, cover: courseCover, title: "Beginner's Guide to Design", author: 'By Ronald Richards', price: 149.9 },
-  { id: 2, cover: courseCover, title: "Beginner's Guide to Design", author: 'By Ronald Richards', price: 149.9 },
-  { id: 3, cover: courseCover, title: "Beginner's Guide to Design", author: 'By Ronald Richards', price: 149.9 },
+  { id: 0, cover: courseCover, title: "Beginner's Guide to Design", author: 'Ronald Richards', price: 149.9 },
+  { id: 1, cover: courseCover, title: "Beginner's Guide to Design", author: 'Ronald Richards', price: 149.9 },
+  { id: 2, cover: courseCover, title: "Beginner's Guide to Design", author: 'Ronald Richards', price: 149.9 },
+  { id: 3, cover: courseCover, title: "Beginner's Guide to Design", author: 'Ronald Richards', price: 149.9 },
 ]

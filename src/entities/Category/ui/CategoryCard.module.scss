@@ -5,8 +5,8 @@
   width: 100%;
   min-width: 10rem;
   min-height: 7.5rem;
-  gap: $space-md;
-  padding: $space-md;
+  gap: $space-6;
+  padding: $space-6;
   border-radius: $radius-def;
   background: $light-surface;
   font-family: $font-condensed;
@@ -38,7 +38,7 @@
 }
 
 .count {
-  font-size: $font-size-sm;
+  font-size: $text-sm;
   color: $light-neutral-tertiary;
   white-space: nowrap;
 }

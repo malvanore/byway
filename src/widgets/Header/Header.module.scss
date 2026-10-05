@@ -7,7 +7,7 @@
   background: $dark-background;
   padding-inline: clamp(1rem, 3vw, 3rem);
   font-family: $font-condensed;
-  gap: $space-md;
+  gap: $space-6;
 }
 
 .logoLink {
@@ -20,18 +20,18 @@
   display: flex;
   width: 100%;
   align-items: center;
-  gap: $space-lg;
+  gap: $space-8;
 }
 
 .form {
   display: flex;
   flex: 1;
   max-height: 60%;
-  gap: $space-md;
+  gap: $space-6;
   align-items: center;
   border-radius: $radius-def;
-  padding-inline: $space-md;
-  padding-block: $space-sm;
+  padding-inline: $space-6;
+  padding-block: $space-4;
   background: $dark-overlay;
 }
 
@@ -39,7 +39,7 @@
   display: flex;
   flex: 1;
   color: $dark-neutral-secondary;
-  font-size: $font-size-md;
+  font-size: $text-lg;
 }
 
 .searchButton {
@@ -59,7 +59,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: $space-md;
+  gap: $space-6;
 }
 
 .cart {
@@ -79,8 +79,8 @@
 
 .authLink {
   display: flex;
-  padding-inline: $space-md;
-  padding-block: $space-xs;
+  padding-inline: $space-6;
+  padding-block: $space-2;
   border-radius: $radius-def;
   color: $dark-neutral-primary;
   border: 1px solid;
