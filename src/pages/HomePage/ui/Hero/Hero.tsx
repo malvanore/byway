@@ -23,7 +23,6 @@ export const Hero = () => {
               Start your instructor journey
             </Button>
           }
-          titleTag={'h1'}
         />
       </div>
       <div className={styles.wrapperRight}>
