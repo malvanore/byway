@@ -1,0 +1,11 @@
+@use '@/shared/styles/tokens' as *;
+
+.row {
+  display: flex;
+  gap: $space-8;
+  overflow-x: auto;
+
+  > * {
+    flex-shrink: 0;
+  }
+}

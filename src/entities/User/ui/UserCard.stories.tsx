@@ -1,8 +1,24 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
+import type { User } from '@/entities/User'
+import { type MockData, MockDataProvider } from '@/shared/mocks'
+
 import { UserCard } from './UserCard'
 
-import AvatarUser from '@/shared/assets/img/avatar.jpg'
+import avatarImage from '@/shared/assets/img/avatar.jpg'
+
+const DEFAULT_USER: User = {
+  id: 0,
+  avatar: avatarImage,
+  name: 'Ronald Richards',
+  occupation: 'UI/UX Designer',
+}
+
+const createMockData = (instructors: Partial<User> = {}): MockData => ({
+  instructors: [{ ...DEFAULT_USER, ...instructors }],
+  categories: [],
+  courses: [],
+})
 
 const meta = {
   title: 'entities/UserCard',
@@ -10,11 +26,17 @@ const meta = {
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',
+    mockData: createMockData(),
   },
+  decorators: [
+    (Story, { parameters }) => (
+      <MockDataProvider value={parameters.mockData}>
+        <Story />
+      </MockDataProvider>
+    ),
+  ],
   args: {
-    avatar: AvatarUser,
-    name: 'Ronald Richards',
-    occupation: 'UI/UX Designer',
+    id: 0,
   },
 } satisfies Meta<typeof UserCard>
 
@@ -24,27 +46,33 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {}
 
-export const LongTitle: Story = {
+export const NotFoundId: Story = {
   args: {
-    name: 'Richardsffffffffffffffffffff',
+    id: 999,
+  },
+}
+
+export const LongName: Story = {
+  parameters: {
+    mockData: createMockData({ name: 'Richardsffffffffffffffffffff' }),
   },
 }
 
 export const LongOccupation: Story = {
-  args: {
-    occupation: 'Designerrrrrrrrrrrrrrrrrrrrr',
+  parameters: {
+    mockData: createMockData({ occupation: 'Designerrrrrrrrrrrrrrrrrrrrr' }),
   },
 }
 
 export const BrokenIcon: Story = {
-  args: {
-    avatar: '/icons/definitely-not-here.svg',
+  parameters: {
+    mockData: createMockData({ avatar: '/ava.svg' }),
   },
 }
 
 export const NarrowContainer: Story = {
-  args: {
-    name: 'Subaodpoaisbjpaosijv Hoo',
+  parameters: {
+    mockData: createMockData({ name: 'Subaodpoaisbjpaosijv Hoo' }),
   },
   decorators: [
     (Story) => (
