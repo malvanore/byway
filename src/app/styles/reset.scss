@@ -73,8 +73,7 @@ select {
 
 /* Видимый фокус только при навигации с клавиатуры (доступность) */
 :focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
+  outline: none;
 }
 
 /* Сброс fieldset */

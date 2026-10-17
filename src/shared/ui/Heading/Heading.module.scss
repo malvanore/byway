@@ -1,0 +1,18 @@
+@use '@/shared/styles/tokens' as *;
+
+.heading {
+  font-family: $font-condensed;
+  font-weight: $font-weight-medium;
+}
+
+.level1 {
+  font-size: $font-size-h1;
+}
+
+.level2 {
+  font-size: $font-size-h2;
+}
+
+.level3 {
+  font-size: $font-size-h3;
+}
