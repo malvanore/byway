@@ -14,6 +14,8 @@ const CATEGORIES = [
   { id: 1, iconSrc: astrologyIcon, title: 'Development', coursesCount: 12 },
   { id: 2, iconSrc: astrologyIcon, title: 'Marketing', coursesCount: 12 },
   { id: 3, iconSrc: astrologyIcon, title: 'Physics', coursesCount: 14 },
+  { id: 4, iconSrc: astrologyIcon, title: 'Physics', coursesCount: 14 },
+  { id: 5, iconSrc: astrologyIcon, title: 'Physics', coursesCount: 14 },
 ]
 
 const COURSES = [
@@ -21,6 +23,8 @@ const COURSES = [
   { id: 1, cover: courseCover, title: "Beginner's Guide to Design", author: 'Ronald Richards', price: 149.9 },
   { id: 2, cover: courseCover, title: "Beginner's Guide to Design", author: 'Ronald Richards', price: 149.9 },
   { id: 3, cover: courseCover, title: "Beginner's Guide to Design", author: 'Ronald Richards', price: 149.9 },
+  { id: 4, cover: courseCover, title: "Beginner's Guide to Design", author: 'Ronald Richards', price: 149.9 },
+  { id: 5, cover: courseCover, title: "Beginner's Guide to Design", author: 'Ronald Richards', price: 149.9 },
 ]
 
 export const MOCK_DATA = {
