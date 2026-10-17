@@ -30,15 +30,16 @@
   gap: $space-6;
   align-items: center;
   border-radius: $radius-def;
-  padding-inline: $space-6;
   padding-block: $space-4;
   background: $dark-overlay;
 }
 
 .search {
-  display: flex;
   flex: 1;
-  color: $dark-neutral-secondary;
+  border-radius: $radius-def;
+  --input-bg: #{$dark-overlay};
+  --input-text: #{$dark-neutral-secondary};
+  --input-placeholder: #{$dark-neutral-tertiary};
   font-size: $text-lg;
 }
 
