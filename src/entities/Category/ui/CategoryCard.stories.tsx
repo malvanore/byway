@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import type { Category } from '@/entities/Category'
-import { type MockData, MockDataProvider } from '@/shared/mocks'
+import type { RootState } from '@/app/store'
 
+import type { Category } from '../types'
 import { CategoryCard } from './CategoryCard'
 
 import astrologyIcon from '@/shared/assets/icons/astrology.svg'
@@ -14,10 +14,10 @@ const DEFAULT_CATEGORY: Category = {
   coursesCount: 52,
 }
 
-const createMockData = (category: Partial<Category> = {}): MockData => ({
-  instructors: [],
-  categories: [{ ...DEFAULT_CATEGORY, ...category }],
-  courses: [],
+const createPreloadedState = (category: Partial<Category> = {}): Partial<RootState> => ({
+  categories: {
+    list: [{ ...DEFAULT_CATEGORY, ...category }],
+  },
 })
 
 const meta = {
@@ -26,15 +26,8 @@ const meta = {
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',
-    mockData: createMockData(),
+    preloadedState: createPreloadedState(),
   },
-  decorators: [
-    (Story, { parameters }) => (
-      <MockDataProvider value={parameters.mockData}>
-        <Story />
-      </MockDataProvider>
-    ),
-  ],
   args: {
     id: 0,
   },
@@ -51,33 +44,34 @@ export const NotFoundId: Story = {
     id: 999,
   },
 }
+
 export const LongTitle: Story = {
   parameters: {
-    mockData: createMockData({ title: 'Astrology Astrology lllll Astrology' }),
+    preloadedState: createPreloadedState({ title: 'Astrology Astrology lllll Astrology' }),
   },
 }
 
 export const LongWord: Story = {
   parameters: {
-    mockData: createMockData({ title: 'Supercalifragilisticexpialidocious' }),
+    preloadedState: createPreloadedState({ title: 'Supercalifragilisticexpialidocious' }),
   },
 }
 
 export const BrokenIcon: Story = {
   parameters: {
-    mockData: createMockData({ iconSrc: '/icons/definitely-not-here.svg' }),
+    preloadedState: createPreloadedState({ iconSrc: '/icons/definitely-not-here.svg' }),
   },
 }
 
 export const LargeCount: Story = {
   parameters: {
-    mockData: createMockData({ coursesCount: 1234567 }),
+    preloadedState: createPreloadedState({ coursesCount: 1234567 }),
   },
 }
 
 export const NarrowContainer: Story = {
   parameters: {
-    mockData: createMockData({ title: 'Astrology, Esoterics and Ancient Divination Practices' }),
+    preloadedState: createPreloadedState({ title: 'Astrology, Esoterics and Ancient Divination Practices' }),
   },
   decorators: [
     (Story) => (

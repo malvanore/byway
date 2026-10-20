@@ -1,5 +1,3 @@
-import { Counter } from '@/entities/Counter/Counter.tsx'
-
 export const TempPage = () => {
-  return <Counter />
+  return <h1>Temp Page</h1>
 }

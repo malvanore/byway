@@ -8,7 +8,17 @@
     "fileSummary": true,
     "directoryStructure": true
   },
-  "include": ["src/**"],
+  "include": [
+    "src/**",
+    ".storybook/**",
+    "package.json",
+    "tsconfig*.json",
+    "vite.config.ts",
+    "eslint.config.*",
+    ".prettierrc*",
+    "prettier.config.*",
+    ".husky/*"
+  ],
   "ignore": {
     "useGitignore": true,
     "useDefaultPatterns": true,
