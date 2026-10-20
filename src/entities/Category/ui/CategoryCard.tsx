@@ -1,5 +1,6 @@
-import { useMockData } from '@/shared/mocks'
+import { useAppSelector } from '@/shared/lib/hooks'
 
+import { selectCategoryById } from '../model/categoriesSlice'
 import type { Category } from '../types'
 
 import styles from './CategoryCard.module.scss'
@@ -7,8 +8,7 @@ import styles from './CategoryCard.module.scss'
 type CategoryCardProps = Pick<Category, 'id'>
 
 export const CategoryCard = ({ id }: CategoryCardProps) => {
-  const { categories } = useMockData()
-  const category = categories.find((item) => item.id === id)
+  const category = useAppSelector((state) => selectCategoryById(state, id))
 
   if (!category) {
     return null
