@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc -b",
     "prepare": "husky",
     "pack": "repomix",
     "storybook": "storybook dev -p 6006",
