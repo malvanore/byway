@@ -1,10 +1,10 @@
-import { UserCard } from '@/entities/User'
-import { useMockData } from '@/shared/mocks'
+import { selectUsers, UserCard } from '@/entities/User'
+import { useAppSelector } from '@/shared/lib/hooks'
 import { Grid } from '@/shared/ui/Grid'
 import { TopSection } from '@/shared/ui/TopSection'
 
 export const Instructors = () => {
-  const { instructors } = useMockData()
+  const instructors = useAppSelector(selectUsers)
 
   return (
     <TopSection title="Top Instructors" textButton="See All">

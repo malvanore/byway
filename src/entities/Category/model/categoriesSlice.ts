@@ -21,6 +21,5 @@ const categoriesSlice = createSlice({
   },
 })
 
-export const { selectCategories } = categoriesSlice.selectors
+export const { selectCategories, selectCategoryById } = categoriesSlice.selectors
 export const categoriesReducer = categoriesSlice.reducer
-export const { selectCategoryById } = categoriesSlice.selectors
