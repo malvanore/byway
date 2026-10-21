@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { type MockData, MockDataProvider } from '@/shared/mocks'
+import type { RootState } from '@/app/store'
 
 import type { Course } from '../types'
 import { CourseCard } from './CourseCard'
@@ -15,10 +15,10 @@ const DEFAULT_COURSE: Course = {
   price: 300,
 }
 
-const createMockData = (course: Partial<Course> = {}): MockData => ({
-  instructors: [],
-  categories: [],
-  courses: [{ ...DEFAULT_COURSE, ...course }],
+const createPreloadedState = (course: Partial<Course> = {}): Partial<RootState> => ({
+  courses: {
+    list: [{ ...DEFAULT_COURSE, ...course }],
+  },
 })
 
 const meta = {
@@ -27,15 +27,8 @@ const meta = {
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',
-    mockData: createMockData(),
+    preloadedState: createPreloadedState(),
   },
-  decorators: [
-    (Story, { parameters }) => (
-      <MockDataProvider value={parameters.mockData}>
-        <Story />
-      </MockDataProvider>
-    ),
-  ],
   args: {
     id: 0,
   },
@@ -55,13 +48,13 @@ export const NotFoundId: Story = {
 
 export const BrokenCover: Story = {
   parameters: {
-    mockData: createMockData({ cover: '/nope.jpg' }),
+    preloadedState: createPreloadedState({ cover: '/nope.jpg' }),
   },
 }
 
 export const NarrowContainer: Story = {
   parameters: {
-    mockData: createMockData({ title: 'looooooooooooooooooooooooommmmngTitle' }),
+    preloadedState: createPreloadedState({ title: 'looooooooooooooooooooooooommmmngTitle' }),
   },
 
   decorators: [
@@ -75,6 +68,6 @@ export const NarrowContainer: Story = {
 
 export const LargePrice: Story = {
   parameters: {
-    mockData: createMockData({ price: 123456789012345 }),
+    preloadedState: createPreloadedState({ price: 123456789012345 }),
   },
 }

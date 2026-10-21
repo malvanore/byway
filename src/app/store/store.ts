@@ -1,9 +1,13 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 
 import { categoriesReducer } from '@/entities/Category'
+import { coursesReducer } from '@/entities/Course'
+import { usersReducer } from '@/entities/User'
 
 const rootReducer = combineReducers({
   categories: categoriesReducer,
+  courses: coursesReducer,
+  users: usersReducer,
 })
 
 export type RootState = ReturnType<typeof rootReducer>
