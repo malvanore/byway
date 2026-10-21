@@ -1,19 +1,21 @@
-import type { ComponentProps, ReactNode } from 'react'
-import cn from 'classnames'
+import type { ChangeEvent } from 'react'
 
 import styles from './Input.module.scss'
 
-interface InputProps extends ComponentProps<'input'> {
-  iconLeft?: ReactNode
-  iconRight?: ReactNode
+interface InputProps {
+  placeholder: string
+  defaultValue: string
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void
 }
 
-export const Input = ({ iconLeft, iconRight, className, ...rest }: InputProps) => {
+export const Input = ({ placeholder, defaultValue, onChange }: InputProps) => {
   return (
-    <div className={cn(styles.wrapper, className)}>
-      {iconLeft && <span className={styles.icon}>{iconLeft}</span>}
-      <input className={styles.input} {...rest} />
-      {iconRight && <span className={styles.icon}>{iconRight}</span>}
-    </div>
+    <input
+      className={styles.input}
+      type="text"
+      placeholder={placeholder}
+      defaultValue={defaultValue}
+      onChange={onChange}
+    />
   )
 }

@@ -3,7 +3,6 @@ import { PromoContent } from '@/shared/ui/PromoContent'
 
 import styles from './BecomeInstructor.module.scss'
 
-import ChevronRightIcon from '@/shared/assets/icons/chevronRight.svg?react'
 import personInstructor from '@/shared/assets/img/personInstructor.svg'
 
 export const BecomeInstructor = () => {
@@ -20,9 +19,10 @@ export const BecomeInstructor = () => {
           'We provide the tools and skills to teach what you love.'
         }
         action={
-          <Button iconRight={<ChevronRightIcon />} onClick={() => alert('Переход на стр для реги инструктором')}>
-            Start your instructor journey
-          </Button>
+          <Button
+            text={'Start your instructor journey'}
+            onClick={() => alert('Переход на стр для реги инструктором')}
+          ></Button>
         }
       />
     </section>
