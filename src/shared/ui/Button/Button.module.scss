@@ -2,37 +2,13 @@
 
 .button {
   display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
   border-radius: $radius-def;
   white-space: nowrap;
-  gap: $space-2;
-  padding-inline: $space-4;
-  padding-block: $space-2;
+  padding-inline: $space-md;
+  padding-block: $space-xs;
   color: $dark-neutral-primary;
   background-color: $dark-overlay;
-  border: 1px solid $dark-surface;
+  border: #18191b;
   font-family: $font-condensed;
-  font-size: $text-base;
-}
-
-.kelp {
-  border-color: $light-kelp-primary;
-}
-
-.salt {
-  border-color: $light-salt-primary;
-}
-
-.vista {
-  border-color: $light-vista-primary;
-}
-
-.icon {
-  gap: $space-5;
-
-  svg {
-    width: 1.25rem;
-    height: 1.25rem;
-  }
+  font-size: $font-size-m;
 }
