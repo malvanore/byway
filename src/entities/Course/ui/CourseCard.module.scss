@@ -3,7 +3,6 @@
 .card {
   display: flex;
   flex-direction: column;
-  width: 100%;
   max-width: 38rem;
   min-height: 17.5rem;
   border-radius: $radius-def;
@@ -26,8 +25,8 @@
   align-items: flex-start;
   width: 100%;
   min-width: 0;
-  padding: $space-md;
-  gap: $space-xs;
+  padding: $space-6;
+  gap: $space-2;
   overflow: hidden;
 }
 

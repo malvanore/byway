@@ -1,11 +1,7 @@
-import { HomePage } from '@/pages/HomePage'
+import { RouterProvider } from 'react-router'
 
-import { BaseLayout } from './layouts/BaseLayout'
+import { router } from './router'
 
 export const App = () => {
-  return (
-    <BaseLayout>
-      <HomePage />
-    </BaseLayout>
-  )
+  return <RouterProvider router={router} />
 }

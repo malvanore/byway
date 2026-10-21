@@ -3,6 +3,7 @@ import { PromoContent } from '@/shared/ui/PromoContent'
 
 import styles from './StudentCta.module.scss'
 
+import ChevronRightIcon from '@/shared/assets/icons/chevronRight.svg?react'
 import personEducation from '@/shared/assets/img/personEducation.svg'
 
 export const StudentCta = () => {
@@ -14,7 +15,11 @@ export const StudentCta = () => {
           'Learners around the world are launching new careers, advancing in ' +
           'their fields, and enriching their lives.'
         }
-        action={<Button text={'Checkout courses'} onClick={() => alert('переход на стр с предложением')}></Button>}
+        action={
+          <Button iconRight={<ChevronRightIcon />} onClick={() => alert('переход на стр с предложением')}>
+            Checkout courses
+          </Button>
+        }
       />
 
       <div className={styles.image}>
