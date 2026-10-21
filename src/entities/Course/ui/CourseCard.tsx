@@ -1,20 +1,10 @@
-import { useMockData } from '@/shared/mocks'
-
 import type { Course } from '../types'
 
 import styles from './CourseCard.module.scss'
 
-type CourseCardProps = Pick<Course, 'id'>
+type CourseCardProps = Pick<Course, 'cover' | 'title' | 'author' | 'price'>
 
-export const CourseCard = ({ id }: CourseCardProps) => {
-  const { courses } = useMockData()
-  const course = courses.find((item) => item.id === id)
-
-  if (!course) {
-    return null
-  }
-
-  const { cover, title, author, price } = course
+export const CourseCard = ({ cover, title, author, price }: CourseCardProps) => {
   return (
     <article className={styles.card}>
       <img className={styles.cover} src={cover} alt="" />

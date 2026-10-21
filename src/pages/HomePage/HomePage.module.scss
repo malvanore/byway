@@ -4,13 +4,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: space-between;
-  margin-inline: $space-16;
-  gap: $space-5;
+  margin-inline: $space-3xl;
+  gap: $space-m;
 }
 
 .topSectionLists {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-inline: $space-16;
+  padding-inline: $space-3xl;
 }

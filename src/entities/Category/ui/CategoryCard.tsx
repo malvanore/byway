@@ -1,20 +1,10 @@
-import { useMockData } from '@/shared/mocks'
-
 import type { Category } from '../types'
 
 import styles from './CategoryCard.module.scss'
 
-type CategoryCardProps = Pick<Category, 'id'>
+type CategoryCardProps = Pick<Category, 'iconSrc' | 'title' | 'coursesCount'>
 
-export const CategoryCard = ({ id }: CategoryCardProps) => {
-  const { categories } = useMockData()
-  const category = categories.find((item) => item.id === id)
-
-  if (!category) {
-    return null
-  }
-
-  const { iconSrc, title, coursesCount } = category
+export const CategoryCard = ({ iconSrc, title, coursesCount }: CategoryCardProps) => {
   return (
     <article className={styles.card}>
       <img src={iconSrc} alt="" className={styles.icon} />

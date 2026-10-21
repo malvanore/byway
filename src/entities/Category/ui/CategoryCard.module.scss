@@ -2,10 +2,11 @@
 
 .card {
   display: flex;
-  min-width: 25rem;
+  width: 100%;
+  min-width: 10rem;
   min-height: 7.5rem;
-  gap: $space-6;
-  padding: $space-6;
+  gap: $space-md;
+  padding: $space-md;
   border-radius: $radius-def;
   background: $light-surface;
   font-family: $font-condensed;
@@ -37,7 +38,7 @@
 }
 
 .count {
-  font-size: $text-sm;
+  font-size: $font-size-sm;
   color: $light-neutral-tertiary;
   white-space: nowrap;
 }

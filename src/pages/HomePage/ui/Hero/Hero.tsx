@@ -5,8 +5,6 @@ import { Banner } from './Banner'
 
 import styles from './Hero.module.scss'
 
-import ChevronRightIcon from '@/shared/assets/icons/chevronRight.svg?react'
-
 export const Hero = () => {
   return (
     <section className={styles.section}>
@@ -18,11 +16,8 @@ export const Hero = () => {
             'We believe that education is the key to personal and professional growth, ' +
             "and we're here to guide you on your journey to success."
           }
-          action={
-            <Button iconRight={<ChevronRightIcon />} onClick={() => alert('переход на стр с менторами')}>
-              Start your instructor journey
-            </Button>
-          }
+          action={<Button text="Start your instructor journey" onClick={() => alert('переход на стр с менторами')} />}
+          titleTag={'h1'}
         />
       </div>
       <div className={styles.wrapperRight}>

@@ -1,18 +1,17 @@
 import { CourseCard } from '@/entities/Course'
-import { useMockData } from '@/shared/mocks'
-import { Grid } from '@/shared/ui/Grid'
+import { COURSES } from '@/shared/mocks'
+import { Button } from '@/shared/ui/Button'
 import { TopSection } from '@/shared/ui/TopSection'
 
 export const Courses = () => {
-  const { courses } = useMockData()
-
   return (
-    <TopSection title="Top Courses" textButton="See All">
-      <Grid>
-        {courses.map(({ id }) => (
-          <CourseCard key={id} id={id} />
-        ))}
-      </Grid>
+    <TopSection
+      title="Top Courses"
+      action={<Button text="See all" onClick={() => alert('переход на стр с курсами')} />}
+    >
+      {COURSES.map(({ id, ...cardProps }) => (
+        <CourseCard key={id} {...cardProps} />
+      ))}
     </TopSection>
   )
 }

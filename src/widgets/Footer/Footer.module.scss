@@ -4,12 +4,12 @@
   display: flex;
   width: 100%;
   min-height: 320px;
-  padding: $space-20;
+  padding: $space-5xl;
   justify-content: space-between;
   background-color: $dark-surface;
   font-family: $font-condensed;
   color: white;
-  gap: $space-6;
+  gap: $space-md;
 }
 
 .brand {
@@ -18,7 +18,7 @@
   flex-direction: column;
   width: 200px;
   height: 120px;
-  gap: $space-4;
+  gap: $space-sm;
 }
 
 .logo {
@@ -36,7 +36,7 @@
 .description {
   width: 70%;
   color: $dark-neutral-secondary;
-  font-size: $text-sm;
+  font-size: $font-size-sm;
 }
 
 .column {
@@ -50,10 +50,10 @@
 
 .list {
   color: $dark-neutral-secondary;
-  font-size: $text-sm;
+  font-size: $font-size-sm;
 }
 
 .contacts {
   color: $dark-neutral-secondary;
-  font-size: $text-sm;
+  font-size: $font-size-sm;
 }
