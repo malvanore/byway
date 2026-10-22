@@ -1,0 +1,8 @@
+@use '@/shared/styles/tokens' as *;
+
+.section {
+  display: flex;
+  padding: $space-6;
+  flex-direction: column;
+  align-items: center;
+}

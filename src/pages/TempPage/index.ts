@@ -1,1 +1,1 @@
-export { TempPage } from './TempPage.tsx'
+export { TempPage } from './TempPage'

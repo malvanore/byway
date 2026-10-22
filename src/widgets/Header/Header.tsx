@@ -1,6 +1,7 @@
+import { Link } from 'react-router'
 import cn from 'classnames'
 
-// import { Button } from '@/shared/ui/Button'
+import { ROUTES_CONST } from '@/shared/config/routes'
 import { Input } from '@/shared/ui/Input'
 
 import styles from './Header.module.scss'
@@ -12,9 +13,9 @@ import SearchIcon from '@/shared/assets/icons/search.svg?react'
 export const Header = () => {
   return (
     <header className={styles.header}>
-      <a className={styles.logoLink} href="/" aria-label="Byway home">
+      <Link className={styles.logoLink} to={ROUTES_CONST.home} aria-label="Byway home">
         <Logo />
-      </a>
+      </Link>
       <div className={styles.wrapper}>
         <form className={styles.form} role="search">
           <Input
@@ -30,17 +31,17 @@ export const Header = () => {
           />
         </form>
         <nav className={styles.nav}>
-          <a className={styles.cart} href="/cart">
+          <Link className={styles.cart} to={ROUTES_CONST.cart}>
             <CartIcon />
-          </a>
+          </Link>
 
-          <a className={cn(styles.authLink, styles.login)} href="/login">
+          <Link className={cn(styles.authLink, styles.login)} to={ROUTES_CONST.login}>
             Log in
-          </a>
+          </Link>
 
-          <a className={cn(styles.authLink, styles.signup)} href="/signup">
+          <Link className={cn(styles.authLink, styles.signup)} to={ROUTES_CONST.signup}>
             Sign up
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

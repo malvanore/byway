@@ -1,3 +1,7 @@
+import { Link } from 'react-router'
+
+import { ROUTES_CONST } from '@/shared/config/routes'
+
 import styles from './Footer.module.scss'
 
 import Logo from '@/shared/assets/icons/logo.svg?react'
@@ -17,10 +21,10 @@ export const Footer = ({ helpLinks, programLinks, contacts }: FooterProps) => {
   return (
     <footer className={styles.footer}>
       <div className={styles.brand}>
-        <a className={styles.logo} href="/">
+        <Link className={styles.logo} to={ROUTES_CONST.home}>
           <Logo />
           <span className={styles.logoText}>Byway</span>
-        </a>
+        </Link>
 
         <p className={styles.description}>
           Empowering learners through accessible and engaging online education. Byway is an online learning platform
