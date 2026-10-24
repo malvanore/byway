@@ -1,3 +1,3 @@
 export const TempPage = () => {
-  return <h1>zz</h1>
+  return <h1>Temp Page</h1>
 }

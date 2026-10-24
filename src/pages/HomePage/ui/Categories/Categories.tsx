@@ -1,10 +1,10 @@
-import { CategoryCard } from '@/entities/Category'
-import { useMockData } from '@/shared/mocks'
+import { CategoryCard, selectCategories } from '@/entities/Category'
+import { useAppSelector } from '@/shared/lib/hooks'
 import { ScrollRow } from '@/shared/ui/ScrollRow'
 import { TopSection } from '@/shared/ui/TopSection'
 
 export const Categories = () => {
-  const { categories } = useMockData()
+  const categories = useAppSelector(selectCategories)
 
   return (
     <TopSection title="Top Categories" textButton="See All">
