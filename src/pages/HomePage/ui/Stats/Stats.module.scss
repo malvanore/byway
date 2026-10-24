@@ -3,6 +3,6 @@
 .section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: $space-l;
-  margin-inline: $space-2xl;
+  gap: $space-10;
+  margin-inline: $space-16;
 }
