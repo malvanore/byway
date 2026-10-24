@@ -1,5 +1,8 @@
 import cn from 'classnames'
 
+// import { Button } from '@/shared/ui/Button'
+import { Input } from '@/shared/ui/Input'
+
 import styles from './Header.module.scss'
 
 import CartIcon from '@/shared/assets/icons/cart.svg?react'
@@ -14,10 +17,17 @@ export const Header = () => {
       </a>
       <div className={styles.wrapper}>
         <form className={styles.form} role="search">
-          <input name="search" className={styles.search} type="search" placeholder="Search..." />
-          <button className={styles.searchButton} type="submit">
-            <SearchIcon />
-          </button>
+          <Input
+            className={styles.search}
+            name="search"
+            type="search"
+            placeholder="Search..."
+            iconRight={
+              <button type="submit" className={styles.searchButton} aria-label="Search">
+                <SearchIcon />
+              </button>
+            }
+          />
         </form>
         <nav className={styles.nav}>
           <a className={styles.cart} href="/cart">
