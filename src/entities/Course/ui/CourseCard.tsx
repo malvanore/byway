@@ -1,5 +1,6 @@
-import { useMockData } from '@/shared/mocks'
+import { useAppSelector } from '@/shared/lib/hooks'
 
+import { selectCourseById } from '../model/coursesSlice'
 import type { Course } from '../types'
 
 import styles from './CourseCard.module.scss'
@@ -7,14 +8,13 @@ import styles from './CourseCard.module.scss'
 type CourseCardProps = Pick<Course, 'id'>
 
 export const CourseCard = ({ id }: CourseCardProps) => {
-  const { courses } = useMockData()
-  const course = courses.find((item) => item.id === id)
+  const courses = useAppSelector((state) => selectCourseById(state, id))
 
-  if (!course) {
+  if (!courses) {
     return null
   }
 
-  const { cover, title, author, price } = course
+  const { cover, title, author, price } = courses
   return (
     <article className={styles.card}>
       <img className={styles.cover} src={cover} alt="" />

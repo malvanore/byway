@@ -1,9 +1,11 @@
-import '../src/app/styles/reset.scss'
-import '../src/app/styles/font.scss'
+import '@/app/styles/reset.scss'
+import '@/app/styles/font.scss'
 
 import type { Preview } from '@storybook/react-vite'
 
+import { withStore } from './decorators/withStore'
 const preview: Preview = {
+  decorators: [withStore],
   parameters: {
     controls: {
       matchers: {

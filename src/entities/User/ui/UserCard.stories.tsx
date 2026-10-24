@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import type { User } from '@/entities/User'
-import { type MockData, MockDataProvider } from '@/shared/mocks'
+import type { RootState } from '@/app/store'
 
+import type { User } from '../types'
 import { UserCard } from './UserCard'
 
 import avatarImage from '@/shared/assets/img/avatar.jpg'
@@ -14,10 +14,10 @@ const DEFAULT_USER: User = {
   occupation: 'UI/UX Designer',
 }
 
-const createMockData = (instructors: Partial<User> = {}): MockData => ({
-  instructors: [{ ...DEFAULT_USER, ...instructors }],
-  categories: [],
-  courses: [],
+const createPreloadedState = (user: Partial<User> = {}): Partial<RootState> => ({
+  users: {
+    list: [{ ...DEFAULT_USER, ...user }],
+  },
 })
 
 const meta = {
@@ -26,15 +26,9 @@ const meta = {
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',
-    mockData: createMockData(),
+    preloadedState: createPreloadedState(),
   },
-  decorators: [
-    (Story, { parameters }) => (
-      <MockDataProvider value={parameters.mockData}>
-        <Story />
-      </MockDataProvider>
-    ),
-  ],
+
   args: {
     id: 0,
   },
@@ -54,25 +48,25 @@ export const NotFoundId: Story = {
 
 export const LongName: Story = {
   parameters: {
-    mockData: createMockData({ name: 'Richardsffffffffffffffffffff' }),
+    preloadedState: createPreloadedState({ name: 'Richardsffffffffffffffffffff' }),
   },
 }
 
 export const LongOccupation: Story = {
   parameters: {
-    mockData: createMockData({ occupation: 'Designerrrrrrrrrrrrrrrrrrrrr' }),
+    preloadedState: createPreloadedState({ occupation: 'Designerrrrrrrrrrrrrrrrrrrrr' }),
   },
 }
 
 export const BrokenIcon: Story = {
   parameters: {
-    mockData: createMockData({ avatar: '/ava.svg' }),
+    preloadedState: createPreloadedState({ avatar: '/ava.svg' }),
   },
 }
 
 export const NarrowContainer: Story = {
   parameters: {
-    mockData: createMockData({ name: 'Subaodpoaisbjpaosijv Hoo' }),
+    preloadedState: createPreloadedState({ name: 'Subaodpoaisbjpaosijv Hoo' }),
   },
   decorators: [
     (Story) => (

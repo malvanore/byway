@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc -b",
     "prepare": "husky",
     "pack": "repomix",
     "storybook": "storybook dev -p 6006",
@@ -26,9 +26,11 @@
     ]
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.13.0",
     "classnames": "^2.5.1",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
+    "react-redux": "^9.3.0",
     "react-router": "^8.4.0"
   },
   "devDependencies": {
