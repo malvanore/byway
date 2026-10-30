@@ -1,0 +1,24 @@
+@use '@/shared/styles/tokens' as *;
+
+.wrapper {
+  padding: $space-10;
+  gap: $space-10;
+}
+
+.coursesCatalog {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  flex-direction: column;
+  gap: $space-10;
+}
+
+.filters {
+  display: flex;
+  height: 10vh;
+  flex-direction: column;
+  gap: $space-6;
+  flex: 0;
+}
+
+.coursesGrid {
+}
