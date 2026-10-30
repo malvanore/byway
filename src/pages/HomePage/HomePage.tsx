@@ -1,8 +1,9 @@
+import { CoursesSection } from '@/widgets/CoursesSection'
+import { InstructorsSection } from '@/widgets/InstructorsSection'
+
 import { BecomeInstructor } from './ui/BecomeInstructor'
 import { Categories } from './ui/Categories'
-import { Courses } from './ui/Courses'
 import { Hero } from './ui/Hero'
-import { Instructors } from './ui/Instructors'
 import { Stats } from './ui/Stats'
 import { StudentCta } from './ui/StudentCta'
 
@@ -15,8 +16,8 @@ export const HomePage = () => {
       <Stats />
       <div className={styles.topSectionLists}>
         <Categories />
-        <Courses />
-        <Instructors />
+        <CoursesSection />
+        <InstructorsSection />
       </div>
       <BecomeInstructor />
       <StudentCta />

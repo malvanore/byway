@@ -3,7 +3,7 @@ import { useAppSelector } from '@/shared/lib/hooks'
 import { Grid } from '@/shared/ui/Grid'
 import { TopSection } from '@/shared/ui/TopSection'
 
-export const Courses = () => {
+export const CoursesSection = () => {
   const courses = useAppSelector(selectCourses)
 
   return (
