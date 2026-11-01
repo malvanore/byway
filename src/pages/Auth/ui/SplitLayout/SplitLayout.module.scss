@@ -1,0 +1,28 @@
+@use '@/shared/styles/tokens' as *;
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: $space-6;
+  width: 100%;
+  max-width: 60%;
+  padding-block: $space-10;
+  justify-self: center;
+  align-self: center;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imageLeft .image {
+  order: -1;
+}
