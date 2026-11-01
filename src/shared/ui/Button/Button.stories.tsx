@@ -47,12 +47,6 @@ export const TwoIcons: Story = {
   },
 }
 
-export const AnotherColors: Story = {
-  args: {
-    color: 'kelp',
-  },
-}
-
 export const NarrowContainer: Story = {
   args: {
     children: 'llllllllllllllllllllllllll',

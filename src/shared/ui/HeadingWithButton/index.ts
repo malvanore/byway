@@ -1,1 +1,1 @@
-export { SectionHeading } from './SectionHeading.tsx'
+export { HeadingWithButton } from './HeadingWithButton'

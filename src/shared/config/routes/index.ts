@@ -1,1 +1,1 @@
-export { ROUTES_CONST } from './routesConst.ts'
+export { ROUTES_CONST } from './routesConst'

@@ -1,1 +1,1 @@
-export { InstructorsSection } from './InstructorsSection.tsx'
+export { InstructorsSection } from './InstructorsSection'

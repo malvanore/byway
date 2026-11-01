@@ -1,6 +1,6 @@
 import { useAppSelector } from '@/shared/lib/hooks'
 
-import { selectUserById } from '../model/usersSlice.ts'
+import { selectUserById } from '../model/usersSlice'
 import type { User } from '../types'
 
 import styles from './UserCard.module.scss'
