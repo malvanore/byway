@@ -1,4 +1,5 @@
-import { Button } from '@/shared/ui/Button'
+import { ROUTES_CONST } from '@/shared/config/routes'
+import { ButtonLink } from '@/shared/ui/Button'
 import { PromoContent } from '@/shared/ui/PromoContent'
 
 import styles from './StudentCta.module.scss'
@@ -16,9 +17,9 @@ export const StudentCta = () => {
           'their fields, and enriching their lives.'
         }
         action={
-          <Button iconRight={<ChevronRightIcon />} onClick={() => alert('переход на стр с предложением')}>
-            Checkout courses
-          </Button>
+          <ButtonLink to={ROUTES_CONST.courses} iconRight={<ChevronRightIcon />}>
+            See All
+          </ButtonLink>
         }
       />
 

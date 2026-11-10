@@ -3,7 +3,7 @@
 .button {
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   border-radius: $radius-def;
   white-space: nowrap;
   gap: $space-2;
@@ -14,6 +14,7 @@
   border: 1px solid $dark-surface;
   font-family: $font-condensed;
   font-size: $text-base;
+  text-decoration: none;
 }
 
 .kelp {

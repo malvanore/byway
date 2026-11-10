@@ -1,1 +1,1 @@
-export { Heading } from './Heading.tsx'
+export { Heading } from './Heading'

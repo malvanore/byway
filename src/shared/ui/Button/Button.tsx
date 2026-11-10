@@ -1,27 +1,15 @@
 import type { ComponentProps, ReactNode } from 'react'
-import cn from 'classnames'
 
 import styles from './Button.module.scss'
 
-type ButtonBorderColor = 'default' | 'kelp' | 'salt' | 'vista'
-
-interface ButtonProps extends Omit<ComponentProps<'button'>, 'color'> {
-  color?: ButtonBorderColor
+interface ButtonProps extends ComponentProps<'button'> {
   iconLeft?: ReactNode
   iconRight?: ReactNode
 }
 
-export const Button = ({
-  color = 'default',
-  iconLeft,
-  iconRight,
-  className,
-  type = 'button',
-  children,
-  ...rest
-}: ButtonProps) => {
+export const Button = ({ iconLeft, iconRight, type = 'button', children, ...rest }: ButtonProps) => {
   return (
-    <button className={cn(styles.button, styles[color], className)} type={type} {...rest}>
+    <button className={styles.button} type={type} {...rest}>
       {iconLeft && <span className={styles.icon}>{iconLeft}</span>}
       {children}
       {iconRight && <span className={styles.icon}>{iconRight}</span>}

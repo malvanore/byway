@@ -7,7 +7,7 @@ export const Categories = () => {
   const categories = useAppSelector(selectCategories)
 
   return (
-    <TopSection title="Top Categories" textButton="See All">
+    <TopSection title="Top Categories">
       <ScrollRow>
         {categories.map(({ id }) => (
           <CategoryCard key={id} id={id} />

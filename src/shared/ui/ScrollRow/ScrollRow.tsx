@@ -3,6 +3,10 @@ import cn from 'classnames'
 
 import styles from './ScrollRow.module.scss'
 
-export const ScrollRow = ({ className, ...rest }: ComponentProps<'div'>) => {
-  return <div className={cn(styles.row, className)} {...rest} />
+export const ScrollRow = ({ className, children, ...rest }: ComponentProps<'div'>) => {
+  return (
+    <div className={cn(styles.row, className)} {...rest}>
+      {children}
+    </div>
+  )
 }

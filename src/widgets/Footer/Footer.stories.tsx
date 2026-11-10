@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { CONTACTS, HELP_LINKS, PROGRAM_LINKS } from './constFooter.ts'
+import { CONTACTS, HELP_LINKS, PROGRAM_LINKS } from './constFooter'
 import { Footer } from './Footer'
 
 const meta = {

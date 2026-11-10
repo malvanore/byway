@@ -1,4 +1,5 @@
-import { Button } from '@/shared/ui/Button'
+import { ROUTES_CONST } from '@/shared/config/routes'
+import { ButtonLink } from '@/shared/ui/Button'
 import { PromoContent } from '@/shared/ui/PromoContent'
 
 import styles from './BecomeInstructor.module.scss'
@@ -20,9 +21,9 @@ export const BecomeInstructor = () => {
           'We provide the tools and skills to teach what you love.'
         }
         action={
-          <Button iconRight={<ChevronRightIcon />} onClick={() => alert('Переход на стр для реги инструктором')}>
-            Start your instructor journey
-          </Button>
+          <ButtonLink to={ROUTES_CONST.signup} iconRight={<ChevronRightIcon />}>
+            See All
+          </ButtonLink>
         }
       />
     </section>

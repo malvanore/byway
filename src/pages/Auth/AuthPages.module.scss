@@ -1,0 +1,11 @@
+@use '@/shared/styles/tokens' as *;
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+}
+
+.label {
+  color: $dark-surface;
+}

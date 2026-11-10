@@ -1,3 +1,14 @@
+import { Heading } from '@/shared/ui/Heading'
+
+import styles from './TepmPage.module.scss'
+
+import notFoundPageBanner from '@/shared/assets/img/notFoundPageBanner.jpg'
+
 export const TempPage = () => {
-  return <h1>Temp Page</h1>
+  return (
+    <section className={styles.section}>
+      <img src={notFoundPageBanner} alt="" width={540} height={180} />
+      <Heading level={1}>Page Not Found</Heading>
+    </section>
+  )
 }
